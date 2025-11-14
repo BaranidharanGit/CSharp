@@ -23,6 +23,12 @@
 
             Operators();
 
+            Console.WriteLine();
+
+            StringToNumberConversion();
+
+            Console.WriteLine();
+
         }
 
         public static void HelloWorld()
@@ -127,12 +133,16 @@
             result = num1 - num2;
             Console.WriteLine(result);
 
-            //Division of numbers
+            //Division of numbers returns quotient
             result = num1 / num2;
             Console.WriteLine(result);
 
             //Multiplication of numbers
             result = num1 * num2;
+            Console.WriteLine(result);
+
+            //Modulus of numbers returns remainder
+            result = num1 % num2;
             Console.WriteLine(result);
 
             //If you need the decimal values of the divison result use double datatype
@@ -155,6 +165,33 @@
             //Decrement after
             Console.WriteLine(num1--);
             Console.WriteLine("After Decrementing" + num1);
+
+            Console.ReadLine();
+        }
+
+        public static void StringToNumberConversion()
+        {
+            Console.WriteLine("----- StringToNumberConversion -----");
+
+            string smallNumber = "50";
+            int convertedSmallNumber = Convert.ToInt32(smallNumber);
+            Console.WriteLine($"Converted Number : {convertedSmallNumber}");
+
+            string LargeNumber = "9000000000000";
+            long convertedLargeNumber = Convert.ToInt64(LargeNumber);
+            Console.WriteLine($"Converted Large Number : {convertedLargeNumber}");
+
+            string negativeNumber = "-60";
+            int negativeNumberConverted = Convert.ToInt32(negativeNumber);
+            Console.WriteLine($"Converted Negative Number : {negativeNumberConverted}");
+
+            string decimalString = "55.23";
+            decimal decimalNumberConverted = Convert.ToDecimal(decimalString);
+            Console.WriteLine($"Converted Decimal Number : {decimalNumberConverted}");
+
+            string floatString = "20.30";
+            float floatNumberConverted = Convert.ToSingle(floatString);
+            Console.WriteLine($"Converted Float Number : {floatNumberConverted}");
 
             Console.ReadLine();
         }
